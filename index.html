@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoot Off</title>
+    <link rel=icon href="https://cdn0.iconfinder.com/data/icons/video-game-15/24/multimedia-video_game-games-pacman-dots-512.png" sizes="16x16" type="image/png">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+        }
+
+        .modal-container{
+            position: relative;
+        }
+
+        .start-modal{
+            position: absolute;
+            background-color: white;
+            color: black;
+            top: 40vh;
+            left: 40vw;
+            width: 20vw;
+            padding: 1vw;
+            text-align: center;
+            border-radius: 1vw;
+        }
+
+        .start-modal h1{
+            font-size: 3vw;
+            font-weight: bold;
+        }
+
+        .start-modal p{
+            font-size: 1.5vw;
+        }
+
+        .start-button{
+            background-color: #2D46B9;
+            color: white;
+            font-size: 2vw;
+            margin-top: 1vw;
+            margin-bottom: 0.5vw;
+            border-radius: 1vw;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+        }
+
+        .start-button:hover{
+            box-shadow: 2px 2px 8px #aaa;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fixed text-white select-none ml-2 mt-1">
+        <span>Score: </span><span id="score-element">0</span>
+    </div>
+
+    <div class="modal-container">
+        <div class="start-modal fixed">
+            <h1 class="modal-score">0</h1>
+            <p>Points</p>
+            <button class="start-button">Start Game</button>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
